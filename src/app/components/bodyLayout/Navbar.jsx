@@ -1,11 +1,13 @@
 
-
+const logoPath = "/logo/logoPic.png"
 const Navbar = () => {
     return (
         <>
             <NavbarContainer>
 
                 <NavFlexBreaker>
+
+                    <NavLogo />
 
                     <ul className="flex justify-end gap-3 ">
                         <li>Menu 1</li>
@@ -36,8 +38,24 @@ const NavbarContainer = ({ children }) => {
 const NavFlexBreaker = ({ children }) => {
     return (
         <>
-            <div className="flex justify-between border border-white rounded-full py-4 px-2">
+            <div className="flex justify-between items-center border border-white rounded-full py-4 px-2">
                 {children}
+            </div>
+        </>
+    )
+}
+const NavLogo = () => {
+    return (
+        <div className="h-16 aspect-[792/315]">
+            <img src={logoPath} />
+        </div>
+    )
+}
+const BigNavEnd = () => {
+    return (
+        <>
+            <div>
+
             </div>
         </>
     )
